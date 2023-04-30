@@ -12,6 +12,9 @@
 		メッセージ入力 <input type="text" name="message">
 		<button>送信</button>
 	</form>
+	<form action="clear" method="GET">
+		<button>Clear</button>
+	</form>	
 	<hr>
 	<h1>メッセージ一覧</h1>
 	<br>
