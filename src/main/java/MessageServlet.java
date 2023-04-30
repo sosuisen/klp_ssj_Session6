@@ -21,12 +21,12 @@ public class MessageServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		String message = req.getParameter("message");
 		HttpSession session = req.getSession();
 		ArrayList<String> list = (ArrayList<String>) session.getAttribute("history");
 		list.add(message);
-		req.getRequestDispatcher("/WEB-INF/message.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/message.jsp").forward(req, res);
 	}
 }
